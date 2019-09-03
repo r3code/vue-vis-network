@@ -1,36 +1,39 @@
 {
-  "name": "vue2vis",
-  "version": "0.0.16",
-  "description": "Vue2 component that helps with Visjs interaction",
-  "jsnext": "dist/vue2vis.js",
-  "main": "dist/vue2vis.min.js",
-  "module": "dist/vue2vis.min.js",
-  "unpkg": "dist/vue2vis.min.js",
+  "name": "vue-vis-network",
+  "version": "0.0.1",
+  "description": "Vue2 component to integrate with vis-network",
+  "jsnext": "dist/vue-vis-network.js",
+  "main": "dist/vue-vis-network.min.js",
+  "module": "dist/vue-vis-network.min.js",
+  "unpkg": "dist/vue-vis-network.min.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "./scripts/build.sh",
+    "build": "run-script-os",
+    "build:windows": "cd ./scripts/ && build.bat",
+    "build:linux": "./scripts/build.sh",
     "lint": "eslint src/* test/*",
     "beforePublish": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alexcode/vue2vis.git"
+    "url": "git://github.com/r3code/vue-vis-network.git"
   },
   "files": [
     "dist/",
     "src/"
   ],
-  "author": "Alex Couturon <infocontact.alex@gmail.com>",
+  "author": "Dmitriy S. Sinyavskiy <contact@r3code.ru>",
   "license": "MIT",
   "keywords": [
     "vue",
     "vis",
-    "visjs"
+    "visjs",
+    "vis-network"
   ],
   "dependencies": {
-    "vis": "^4.21.0"
+    "vis-network": "^5.2.5"
   },
   "peerDependencies": {
     "vue": "~2.x"
@@ -44,6 +47,7 @@
     "file-loader": "^2.0.0",
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "run-script-os": "^1.0.7",
     "style-loader": "^0.23.1",
     "vue": "^2.5.17",
     "vue-html-loader": "^1.2.4",

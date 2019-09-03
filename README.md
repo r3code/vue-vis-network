@@ -1,45 +1,47 @@
-# vue2vis
+# vue-vis-network
 
-> Vue2 component that helps with <a href="http://visjs.org/">Visjs</a> interaction
+> Vue2 component to integrate with <a href="Vue2 component to integrate with vis-network">Vis-Network</a> views
 
 <p align="center">
-  <a href="https://travis-ci.org/alexcode/vue2vis">
-    <img src="https://travis-ci.org/alexcode/vue2vis.svg?branch=master" alt="Build Status" />
+  <a href="https://travis-ci.org/r3code/vue-vis-network">
+    <img src="https://travis-ci.org/r3code/vue-vis-network.svg?branch=master" alt="Build Status" />
   </a>
-  <a href="https://coveralls.io/github/alexcode/vue2vis?branch=master">
-    <img src="https://coveralls.io/repos/github/alexcode/vue2vis/badge.svg?branch=master" alt="Coverage Status" />
+  <a href="https://coveralls.io/github/r3code/vue-vis-network?branch=master">
+    <img src="https://coveralls.io/repos/github/r3code/vue-vis-network/badge.svg?branch=master" alt="Coverage Status" />
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?" alt="Software License" />
   </a>
-  <a href="https://npmjs.org/package/vue2vis">
-    <img src="https://img.shields.io/npm/v/vue2vis.svg?" alt="Packagist" />
+  <a href="https://npmjs.org/package/vue-vis-network">
+    <img src="https://img.shields.io/npm/v/vue-vis-network.svg?" alt="Packagist" />
   </a>
-  <a href="https://github.com/alexcode/vue2vis/releases">
-    <img src="https://img.shields.io/github/release/alexcode/vue2vis.svg?" alt="Latest Version" />
+  <a href="https://github.com/r3code/vue-vis-network/releases">
+    <img src="https://img.shields.io/github/release/r3code/vue-vis-network.svg?" alt="Latest Version" />
   </a>
 
-  <a href="https://github.com/alexcode/vue2vis/issues">
-    <img src="https://img.shields.io/github/issues/alexcode/vue2vis.svg?" alt="Issues" />
-  </a>
-</p>
+  <a href="https://github.com/r3code/vue-vis-network/issues">
+    <img src="https://img.shields.io/github/issues/r3code/vue-vis-network.svg?" alt="Issues" />
+  </a>  
+</p> 
+
+Best reagrds to the https://github.com/alexcode/vue2vis which is the base for this component. This project might have some issues from https://github.com/alexcode/vue2vis
 
 ### Installation
 ```
-npm install --save vue2vis
+npm install --save vue-vis-network
 ```
 
 or
 
 ```
-yarn add vue2vis
+yarn add vue-vis-network
 ```
 
 ## Usage
 
 Declare the component
 ``` javascript
-Vue.component('timeline', vue2vis.Timeline);
+Vue.component('network', vue-vis-network.Network);
 ```
 
 Add the component in the template.
@@ -47,11 +49,11 @@ Add the component in the template.
 ```html
 <body>
   <div id="app">
-    <timeline ref="timeline"
-    :items="items"
-    :groups="groups"
+    <network ref="network"
+    :nodes="nodes"
+    :edges="edges"
     :options="options">
-    </timeline>
+    </network>
   </div>
 </body>
 ```
@@ -62,18 +64,32 @@ new Vue({
   el: '#app',
   data() {
     return {
-      groups: [{
-      	id: 0,
-        content: 'Group 1'
-      }],
-      items: [{
-      	id: 0,
-        group: 0,
-        start: new Date(),
-        content: 'Item 1'
-      }],
+      nodes: [
+        {id: 1,  label: 'circle',  shape: 'circle' },
+        {id: 2,  label: 'ellipse', shape: 'ellipse'},
+        {id: 3,  label: 'database',shape: 'database'},
+        {id: 4,  label: 'box',     shape: 'box'    },
+        {id: 5,  label: 'diamond', shape: 'diamond'},
+        {id: 6,  label: 'dot',     shape: 'dot'},
+        {id: 7,  label: 'square',  shape: 'square'},
+        {id: 8,  label: 'triangle',shape: 'triangle'},
+      ],
+      edges: [
+        {from: 1, to: 2},
+        {from: 2, to: 3},
+        {from: 2, to: 4},
+        {from: 2, to: 5}, 
+        {from: 5, to: 6},
+        {from: 5, to: 7},
+        {from: 6, to: 8}
+      ],
       options: {
-        editable: true,
+         nodes: {
+          borderWidth: 4
+         },
+         edges: {
+          color: 'lightgray'
+        }
       }
     }
   },
@@ -82,31 +98,28 @@ new Vue({
 
 Add Visjs CSS
 ``` css
-@import "vue2vis/dist/vue2vis.css";
+@import "vue-vis-network/dist/vue-vis-network.css";
 ```
 
 Here is a basic working demo with item generation:
-[JS Fiddle Basic Demo](https://jsfiddle.net/alexkodo/ejdut8fm/)
-
-You can also create items or group labels as Vue Components:
-[JS Fiddle Item Vue Component Demo](https://jsfiddle.net/alexkodo/n978c58d/)
+[JS Fiddle Basic Demo](https://jsfiddle.net/TODO/)
 
 ## Events
 
 ### Component Events
-By default all Vis events are emitted by your component. You can subscribe to a subset by passing an array in the prop `events` [Visjs event](http://visjs.org/docs/timeline/#Events).
+By default all Vis-network events are emitted by your component. You can subscribe to a subset by passing an array in the prop `events` [Vis-network event](https://visjs.github.io/vis-network/docs/network/#Events).
 
 ```html
 <body>
   <div id="app">
-    <timeline ref="timeline"
-    :items="items"
-    :groups="groups"
+    <network ref="network"
+    :nodes="nodes"
+    :edges="edges"
     :options="options"
-    :events="['drop', 'changed']"
-    @drop="myDropCallback"
-    @changed="myChangedCallback">
-    </timeline>
+    :events="['selectNode', 'hoverNode']"
+    @selectNode="onNodeSelected"
+    @hoverNode="onNodeHovered">
+    </network>
   </div>
 </body>
 ```
@@ -116,7 +129,7 @@ By default all Vis events are emitted by your component. You can subscribe to a 
 When you pass an Array of data object, it is converted internally as a DataSet.
 An event with the DataSet object will be fired at mounted. It's name will be prepend with the prop name (Ex: `items-mounted`, `groups-mounted`). You could use it to interact with the DataSet.
 
-All the [Visjs DataSet event](http://visjs.org/docs/data/dataset.html#Events) will be prepened the same fashion (`items-add`, `items-remove`, `items-update`). For example, pushing a new object to the `items` prop will fire a `items-add` event with the following payload:
+All the [Visjs DataSet event](https://visjs.github.io/vis-data/data/dataset.html#Events) will be prepened the same fashion (`items-add`, `items-remove`, `items-update`). For example, pushing a new object to the `items` prop will fire a `items-add` event with the following payload:
 ```javascript
 {
   event: 'add',
@@ -132,40 +145,37 @@ All the [Visjs DataSet event](http://visjs.org/docs/data/dataset.html#Events) wi
 You can also manage your own data bindings by passing your own DataSet or DataView instead of an Array.
 
 ``` javascript
-import { DataSet } from 'vue2vis';
+import { DataSet } from 'vue-vis-network';
 
 new Vue({
   el: '#app',
   data() {
     return {
-      groups: new DataSet([{
-      	id: 0,
-        content: 'Group 1'
-      }]),
-      items: new DataSet([{
-      	id: 0,
-        group: 0,
-        start: new Date(),
-        content: 'Item 1'
-      }]),
+      nodes: new DataSet([
+        {id: 1,  label: 'circle',  shape: 'circle' },
+        {id: 2,  label: 'ellipse', shape: 'ellipse'},
+        {id: 3,  label: 'database',shape: 'database'}
+      ]),
+      edges: new DataSet([
+        {from: 1, to: 2},
+        {from: 1, to: 3}
+      ]),
       options: {
-        editable: true,
+        nodes: {
+          borderWidth: 4
+         }
       }
     }
   },
 });
 ```
 
-## Visjs documentation
+## Vis-network documentation
 
-Full reference of Item and Group formats, options properties and events: [Timeline](http://visjs.org/docs/timeline), [Network](http://visjs.org/docs/network), [Graph2d](http://visjs.org/docs/graph2d), [DataSet](http://visjs.org/docs/dataset), [DataView](http://visjs.org/docs/dataview)
-
-## List of currently implemented modules
-
--   [x] Timeline
--   [x] Graph2d
--   [ ] Graph3d
--   [x] Network
+For the full reference see: 
+* [Network](https://visjs.github.io/vis-network/docs/network/)
+* [DataSet](https://visjs.github.io/vis-data/data/dataset.html)
+* [DataView](https://visjs.github.io/vis-data/data/dataview.html)
 
 ## Change log
 
@@ -197,28 +207,28 @@ $ npm run build
 $ npm link
 $ cd examples
 $ npm install
-$ npm link vue2vis
+$ npm link vue-vis-network
 # serve with hot reload at localhost:8080
 $ npm run dev
 ```
 Go to <http://localhost:8080/> to see running examples
 
-NOTE: If you make changes to the library you should run 'npm run build' again in the root folder.
+NOTE: If you make changes to the library you should run `npm run build` again in the root folder.
 The dev server should detect modification and reload the demo
 
 ## Security
 
-If you discover any security related issues, please email infocontact.alex@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please email contact@r3code.ru instead of using the issue tracker.
 
 ## Credits
 
-- [Alex Couturon][link-author]
-- [João Menighin](https://github.com/Menighin)
+- [Dmitriy S. Sinyavskiy Couturon][link-author] 
+- [Alex Couturon](https://github.com/alexcode)
 - [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[link-author]: https://github.com/alexcode
+[link-author]: https://github.com/r3code
 [link-contributors]: ../../contributors

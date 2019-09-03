@@ -1,6 +1,6 @@
-# vue2vis-examples
+# Vue Vis-Network integration examples
 
-> A Vue.js project
+> A Vue.js example project integrating vis-network
 
 ## Build Setup
 

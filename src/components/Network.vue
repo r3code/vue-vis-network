@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { DataSet, DataView, Network } from 'vis';
+import { DataSet, DataView, Network } from 'vis-network';
 import { mountVisData, translateEvent } from '../utils';
 
 export default {

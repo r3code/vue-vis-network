@@ -1,4 +1,4 @@
-import { DataSet, DataView } from 'vis';
+import { DataSet, DataView } from 'vis-network';
 
 const arrayDiff = (arr1, arr2) => arr1.filter(x => arr2.indexOf(x) === -1);
 

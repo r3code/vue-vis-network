@@ -1,12 +1,8 @@
-import { DataSet, DataView } from 'vis';
-import Timeline from './components/Timeline.vue';
-import Graph2d from './components/Graph2d.vue';
+import { DataSet, DataView } from 'vis-network';
 import Network from './components/Network.vue';
-import '../node_modules/vis/dist/vis.css';
+import '../node_modules/vis-network/dist/vis-network.css';
 
 export {
-  Timeline,
-  Graph2d,
   Network,
   DataSet,
   DataView,

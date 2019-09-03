@@ -1,8 +1,8 @@
 {
-  "name": "vue2vis-examples",
+  "name": "vue-vis-network-examples",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Alex Couturon <infocontact.alex@gmail.com>",
+  "author": "Dmitriy S. Sinyavskiy <contact@r3code.ru>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue2vis": "^0.0.15"
+    "vue-vis-network": "^0.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.1",

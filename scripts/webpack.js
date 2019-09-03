@@ -24,14 +24,14 @@ config.context = path.resolve(__dirname, '..');
 
 // Client entry
 config.entry = {
-  vue2vis: path.resolve(__dirname, '../src/main')
+  vueVisNetwork: path.resolve(__dirname, '../src/main')
 };
 
 // Basic output config
 config.output = {
   path: path.resolve(__dirname, '../dist'),
-  filename: 'vue2vis.js',
-  library: ['vue2vis'],
+  filename: 'vue-vis-network.js',
+  library: ['vue-vis-network'],
   libraryTarget: 'umd',
   globalObject: 'this',
 };
@@ -44,13 +44,13 @@ config.resolve = {
 };
 
 config.externals = [{
-  'vis': {
-    umd: 'vis',
-    global: 'vis',
-    root: 'vis',
-    commonjs2: 'vis',
-    commonjs: 'vis',
-    amd: 'vis'
+  'vis-network': {
+    umd: 'vis-network',
+    global: 'vis-network',
+    root: 'vis-network',
+    commonjs2: 'vis-network',
+    commonjs: 'vis-network',
+    amd: 'vis-network'
   }
 }];
 
@@ -88,7 +88,7 @@ config.module = {
 };
 process.traceDeprecation = true;
 if (process.env.NODE_ENV === 'production') {
-  config.output.filename = 'vue2vis.min.js'
+  config.output.filename = 'vue-vis-network.min.js'
   config.devtool = '#source-map';
 } else {
   config.devtool = '#eval-source-map';
