@@ -102,7 +102,7 @@ Add Visjs CSS
 ```
 
 Here is a basic working demo with item generation:
-TODO: [JS Fiddle Basic Demo](https://jsfiddle.net/TODO/)
+TODO:: [JS Fiddle Basic Demo](https://jsfiddle.net/TODO/)
 
 ## Events
 
