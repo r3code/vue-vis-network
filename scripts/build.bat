@@ -3,7 +3,7 @@
 rem Script name
 set me=%~n0
 set SCRIPT_DIR=%~dp0
-IF %SCRIPT_DIR:~-1%==\ set SCRIPT_DIR=%SCRIPT_DIR:~0,-1%        
+IF %SCRIPT_DIR:~-1%==\ set SCRIPT_DIR=%SCRIPT_DIR:~0,-1%
 
 echo Build umd version...
 call :build "development" || (
@@ -11,12 +11,12 @@ call :build "development" || (
   goto :error
 )        
 
-echo Build umd version - OK  
+echo Build umd version - OK
 call :build "production" || (
   SET ERROR_MSG=Failed to build umd minified version
   goto :error
 ) 
-echo Build umd minified version - OK  
+echo Build umd minified version - OK
 goto :ok
 
 :error
@@ -30,14 +30,14 @@ exit /b 0
 
 rem FUNCTIONS
 
-:build      
+:build
 echo. 
-echo Start build, mode: %~1 
+echo Start build, mode: %~1
 if "%~1"=="" (
   SET ERROR_MSG=build func %%1 not set. Build stop
   goto :error
 )   
-SET NODE_ENV=%~1 
+SET NODE_ENV=%~1
 echo NODE_ENV=%NODE_ENV%
 call "%SCRIPT_DIR%/../node_modules/.bin/webpack" --hide-modules --colors --progress --config webpack.js --env %NODE_ENV% --display-error-details
 goto :eof
