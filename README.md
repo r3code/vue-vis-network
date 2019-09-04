@@ -41,7 +41,7 @@ yarn add vue-vis-network
 
 Declare the component
 ``` javascript
-Vue.component('network', vue-vis-network.Network);
+Vue.component('network', vueVisNetwork.Network);
 ```
 
 Add the component in the template.
@@ -98,7 +98,7 @@ new Vue({
 
 Add Visjs CSS
 ``` css
-@import "vue-vis-network/dist/vue-vis-network.css";
+@import "vue-vis-network/dist/vueVisNetwork.css";
 ```
 
 Here is a basic working demo with item generation:
@@ -222,7 +222,7 @@ If you discover any security related issues, please email contact@r3code.ru inst
 
 ## Credits
 
-- [Dmitriy S. Sinyavskiy Couturon][link-author] 
+- [Dmitriy S. Sinyavskiy][link-author] 
 - [Alex Couturon](https://github.com/alexcode)
 - [All Contributors][link-contributors]
 
