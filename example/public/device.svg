@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64"  viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Windowsphone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Icons---Squared" transform="translate(-376.000000, -1051.000000)">
+            <g id="Windowsphone" transform="translate(376.000000, 1051.000000)">
+                <polygon id="Square" fill="#00B6F0" points="0 72 72 72 72 0 0 0"></polygon>
+                <path d="M12,18.7959399 L31.6161536,16.1326369 L31.6247284,34.995574 L12.0182599,35.106885 L12,18.7959399 Z M31.6068093,37.1691539 L31.6220351,56.0488427 L12.0154896,53.3614999 L12.0143903,37.0428447 L31.6068093,37.1691539 Z M33.9847108,15.7843142 L59.9939262,12 L59.9939262,34.7559155 L33.9847108,34.9617638 L33.9847108,15.7843142 Z M60,37.3466004 L59.9938987,60 L33.9846833,56.3403894 L33.9482404,37.3043841 L60,37.3466004 Z" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

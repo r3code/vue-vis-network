@@ -201,15 +201,20 @@ $ npm run build
 
 ```
 
-### Run demo locally
+### Run demo locally  
+
 ``` bash
-# Run demo at localhost:8080
-$ npm link
-$ cd examples
-$ npm install
-$ npm link vue-vis-network
-# serve with hot reload at localhost:8080
-$ npm run dev
+# install vue-vis-network local module  
+cd ..  
+npm link       
+# prepare example
+cd example
+# install the example dependencies
+npm install 
+# add local vue-vis-network module to node_modules
+npm link vue-vis-network
+# run demo server
+npm run serve
 ```
 Go to <http://localhost:8080/> to see running examples
 
