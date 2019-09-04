@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/r3code/vue-vis-network.git"
+    "url": "https://github.com/r3code/vue-vis-network.git"
   },
   "files": [
     "dist/",
