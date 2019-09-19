@@ -7,7 +7,7 @@
   "module": "dist/vue-vis-network.min.js",
   "unpkg": "dist/vue-vis-network.min.js",
   "directories": {
-    "test": "test"
+    "example": "example"
   },
   "scripts": {
     "build": "run-script-os",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/r3code/vue-vis-network.git"
+    "url": "git+https://github.com/r3code/vue-vis-network.git"
   },
   "files": [
     "dist/",
@@ -57,5 +57,9 @@
     "webpack": "^4.16.4",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/r3code/vue-vis-network/issues"
+  },
+  "homepage": "https://github.com/r3code/vue-vis-network#readme"
 }
