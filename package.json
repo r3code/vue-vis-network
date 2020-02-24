@@ -1,6 +1,6 @@
 {
   "name": "vue-vis-network",
-  "version": "0.0.3",
+  "version": "1.0.1",
   "description": "Vue2 component to integrate with vis-network",
   "jsnext": "dist/vue-vis-network.js",
   "main": "dist/vue-vis-network.min.js",
@@ -14,7 +14,8 @@
     "build:windows": "cd ./scripts/ && build.bat",
     "build:linux": "./scripts/build.sh",
     "lint": "eslint src/* test/*",
-    "beforePublish": "npm run lint && npm run build"
+    "beforePublish": "npm run lint && npm run build",
+    "test": "echo \"No test specified\""
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,7 @@
     "vis-network"
   ],
   "dependencies": {
-    "vis-network": "^5.3.1"
+    "vis-network": "^5.4.1"
   },
   "peerDependencies": {
     "vue": "~2.x"
