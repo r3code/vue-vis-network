@@ -8,8 +8,9 @@
     "example": "example"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vueVisNetwork src/main.js",
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "build:bundle": "vue-cli-service build --target lib --name vueVisNetwork src/main.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "beforePublish": "npm run lint && npm run build"
@@ -31,8 +32,7 @@
     "vis-network"
   ],
   "dependencies": {
-    "vis-network": "^5.4.1",
-    "core-js": "^3.6.4"
+    "vis-network": "^5.4.1"
   },
   "peerDependencies": {
     "vue": "~2.x"
@@ -51,7 +51,9 @@
     "prettier": "^1.19.1",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
-    "vue-vis-network": "^1.0.1"
+    "vue-vis-network": "^1.0.1",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11"
   },
   "bugs": {
     "url": "https://github.com/r3code/vue-vis-network/issues"
