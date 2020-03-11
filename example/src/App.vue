@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="wrapper">
     <h2>Vue integraton with Vis-Network Example</h2>
     <network
       class="network"
