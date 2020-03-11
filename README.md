@@ -196,8 +196,18 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 # Once you have cloned this repo, install dependencies
 $ npm install
 
-# build for development and production with minification
+# Build for development and production with minification
 $ npm run build
+
+```
+**Build for production**
+```
+# Linux
+NODE_ENV=production npm run build
+# Windows
+set NODE_ENV=production && npm run build
+# Prepare for NPM
+set NODE_ENV=production && npm run build:bundle
 
 ```
 
