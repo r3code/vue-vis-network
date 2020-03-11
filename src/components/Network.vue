@@ -3,11 +3,11 @@
 </template>
 
 <script>
-import { DataSet, DataView, Network } from 'vis-network';
-import { mountVisData, translateEvent } from '../utils';
+import { DataSet, DataView, Network } from "vis-network";
+import { mountVisData, translateEvent } from "../utils";
 
 export default {
-  name: 'network',
+  name: "network",
   props: {
     edges: {
       type: [Array, DataSet, DataView],
@@ -20,36 +20,36 @@ export default {
     events: {
       type: Array,
       default: () => [
-        'click',
-        'doubleClick',
-        'oncontext',
-        'hold',
-        'release',
-        'select',
-        'selectNode',
-        'selectEdge',
-        'deselectNode',
-        'deselectEdge',
-        'dragStart',
-        'dragging',
-        'dragEnd',
-        'hoverNode',
-        'blurNode',
-        'hoverEdge',
-        'blurEdge',
-        'zoom',
-        'showPopup',
-        'hidePopup',
-        'startStabilizing',
-        'stabilizationProgress',
-        'stabilizationIterationsDone',
-        'stabilized',
-        'resize',
-        'initRedraw',
-        'beforeDrawing',
-        'afterDrawing',
-        'animationFinished',
-        'configChange'
+        "click",
+        "doubleClick",
+        "oncontext",
+        "hold",
+        "release",
+        "select",
+        "selectNode",
+        "selectEdge",
+        "deselectNode",
+        "deselectEdge",
+        "dragStart",
+        "dragging",
+        "dragEnd",
+        "hoverNode",
+        "blurNode",
+        "hoverEdge",
+        "blurEdge",
+        "zoom",
+        "showPopup",
+        "hidePopup",
+        "startStabilizing",
+        "stabilizationProgress",
+        "stabilizationIterationsDone",
+        "stabilized",
+        "resize",
+        "initRedraw",
+        "beforeDrawing",
+        "afterDrawing",
+        "animationFinished",
+        "configChange"
       ],
     },
     options: {
@@ -256,8 +256,8 @@ export default {
   },
   mounted() {
     const container = this.$refs.visualization;
-    this.visData.nodes = mountVisData(this, 'nodes');
-    this.visData.edges = mountVisData(this, 'edges');
+    this.visData.nodes = mountVisData(this, "nodes");
+    this.visData.edges = mountVisData(this, "edges");
     this.network = new Network(container, this.visData, this.options);
 
     this.events.forEach(eventName =>

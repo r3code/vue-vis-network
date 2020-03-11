@@ -1,4 +1,4 @@
-import { DataSet, DataView } from 'vis-network';
+import { DataSet, DataView } from "vis-network";
 
 const arrayDiff = (arr1, arr2) => arr1.filter(x => arr2.indexOf(x) === -1);
 
@@ -8,7 +8,7 @@ const mountVisData = (vm, propName) => {
   if (!(vm[propName] instanceof DataSet || vm[propName] instanceof DataView)) {
     data = new DataSet(vm[propName]);
     // Rethrow all events
-    data.on('*', (event, properties, senderId) =>
+    data.on("*", (event, properties, senderId) =>
       vm.$emit(`${propName}-${event}`, { event, properties, senderId }));
     // We attach deep watcher on the prop to propagate changes in the DataSet
     const callback = (value) => {
@@ -21,7 +21,7 @@ const mountVisData = (vm, propName) => {
     };
 
     vm.$watch(propName, callback, {
-      deep: true,
+      deep: true
     });
   }
 
@@ -32,11 +32,7 @@ const mountVisData = (vm, propName) => {
 };
 
 const translateEvent = (event) => {
-  return event.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+  return event.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 };
 
-export {
-  arrayDiff,
-  mountVisData,
-  translateEvent
-};
+export { arrayDiff, mountVisData, translateEvent };
