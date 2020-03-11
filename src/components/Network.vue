@@ -74,7 +74,7 @@ export default {
   methods: {
     setData(n, e) {
       this.visData.nodes = Array.isArray(n) ? new DataSet(n) : n;
-      this.visData.edges =  Array.isArray(e) ? new DataSet(e) : e;
+      this.visData.edges = Array.isArray(e) ? new DataSet(e) : e;
       this.network.setData(this.visData);
     },
     destroy() {
@@ -261,11 +261,13 @@ export default {
     this.network = new Network(container, this.visData, this.options);
 
     this.events.forEach(eventName =>
-      this.network.on(eventName, props => this.$emit(translateEvent(eventName), props))
+      this.network.on(eventName, props => 
+        this.$emit(translateEvent(eventName), props)
+      )
     );
   },
   beforeDestroy() {
     this.network.destroy();
-  },
+  }
 };
 </script>
