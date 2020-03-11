@@ -2,10 +2,8 @@
   "name": "vue-vis-network",
   "version": "1.0.1",
   "description": "Vue2 component to integrate with vis-network",
-  "jsnext": "dist/vue-vis-network.js",
-  "main": "dist/vue-vis-network.min.js",
-  "module": "dist/vue-vis-network.min.js",
-  "unpkg": "dist/vue-vis-network.min.js",
+  "main": "dist/vueVisNetwork.umd.js",
+  "module": "dist/vueVisNetwork.common.js",
   "directories": {
     "example": "example"
   },
