@@ -1,5 +1,5 @@
 <template>
-    <div ref="visualization"></div>
+  <div ref="visualization"></div>
 </template>
 
 <script>
@@ -50,7 +50,7 @@ export default {
         "afterDrawing",
         "animationFinished",
         "configChange"
-      ],
+      ]
     },
     options: {
       type: Object,
@@ -261,7 +261,7 @@ export default {
     this.network = new Network(container, this.visData, this.options);
 
     this.events.forEach(eventName =>
-      this.network.on(eventName, props => 
+      this.network.on(eventName, props =>
         this.$emit(translateEvent(eventName), props)
       )
     );

@@ -9,9 +9,10 @@ const mountVisData = (vm, propName) => {
     data = new DataSet(vm[propName]);
     // Rethrow all events
     data.on("*", (event, properties, senderId) =>
-      vm.$emit(`${propName}-${event}`, { event, properties, senderId }));
+      vm.$emit(`${propName}-${event}`, { event, properties, senderId })
+    );
     // We attach deep watcher on the prop to propagate changes in the DataSet
-    const callback = (value) => {
+    const callback = value => {
       if (Array.isArray(value)) {
         const newIds = new DataSet(value).getIds();
         const diff = arrayDiff(vm.visData[propName].getIds(), newIds);
@@ -31,7 +32,7 @@ const mountVisData = (vm, propName) => {
   return data;
 };
 
-const translateEvent = (event) => {
+const translateEvent = event => {
   return event.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 };
 
