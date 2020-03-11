@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 NA
 
+## [1.0.2] - 2020-03-11 
+### Changed
+- Build scripts replaced by `vue-cli-service` to build the dist
+- Code style fixed
+
 ## [1.0.1] - 2020-02-20 
 ### Added
 - Published at https://www.npmjs.com/package/vue-vis-network  

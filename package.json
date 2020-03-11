@@ -1,6 +1,6 @@
 {
   "name": "vue-vis-network",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue2 component to integrate with vis-network",
   "main": "dist/vueVisNetwork.umd.js",
   "module": "dist/vueVisNetwork.common.js",
