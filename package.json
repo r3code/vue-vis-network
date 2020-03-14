@@ -51,9 +51,7 @@
     "prettier": "^1.19.1",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11",
-    "vue-vis-network": "^1.0.1",
-    "webpack-bundle-analyzer": "^3.6.1",
-    "webpack-cli": "^3.3.11"
+    "vue-vis-network": "^1.0.1"
   },
   "bugs": {
     "url": "https://github.com/r3code/vue-vis-network/issues"
