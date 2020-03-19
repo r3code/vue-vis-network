@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - node
 script:
-  - yarn run build
+  - yarn run build:bundle
 deploy:
   provider: npm
   skip_cleanup: true
