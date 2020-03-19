@@ -28,13 +28,13 @@ Best reagrds to the https://github.com/alexcode/vue2vis which is the base for th
 
 ### Installation
 ```
-npm install --save vue-vis-network
+npm install --save vis-util vis-data vis-network vue-vis-network
 ```
 
 or
 
 ```
-yarn add vue-vis-network
+yarn add vis-util vis-data vis-network vue-vis-network
 ```
 
 ## Usage
@@ -102,8 +102,7 @@ Add Visjs CSS
 @import "vue-vis-network/dist/vueVisNetwork.css";
 ```
 
-Here is a basic working demo with item generation:
-TODO:: [JS Fiddle Basic Demo](https://jsfiddle.net/TODO/)
+Here is a [basic working demo](https://codepen.io/r3code/pen/abOjJbQ)
 
 ## Events
 
