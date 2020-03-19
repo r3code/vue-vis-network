@@ -71,24 +71,28 @@
 <script>
 import { Network } from "vue-vis-network";
 
-export default {
-  data: () => ({
-    networkEvents: "",
-    network: {
-      nodes: [
-        { id: 1, label: "Node 1" },
-        { id: 2, label: "Node 2" },
-        { id: 3, label: "Node 3. Picture clipped", shape: "image", image: "ups.png", imagePadding:4, size: 25 },
-        { id: 4, label: "Node 4 with PNG picture", shape: "image", image: "ups.png", imagePadding:{ top: 10, right: 15, left: 15, bottom: 10}, shapeProperties: { useImageSize: true } },
-        { id: 5, label: "Node 5 with SVG picture", shape: "image", image: "device.svg", imagePadding:5, shapeProperties: { useImageSize: true } }
-      ],
-      edges: [
+let defNodes = [
+  { id: 1, label: "Node 1" },
+  { id: 2, label: "Node 2" },
+  { id: 3, label: "Node 3. Picture clipped", shape: "image", image: "ups.png", imagePadding:4, size: 25 },
+  { id: 4, label: "Node 4 with PNG picture", shape: "image", image: "ups.png", imagePadding:{ top: 10, right: 15, left: 15, bottom: 10}, shapeProperties: { useImageSize: true } },
+  { id: 5, label: "Node 5 with SVG picture", shape: "image", image: "device.svg", imagePadding:5, shapeProperties: { useImageSize: true } }
+]
+
+let defEdges = [
         { id: 1, from: 1, to: 3 },
         { id: 2, from: 1, to: 2 },
         { id: 3, from: 2, to: 4 },
         { id: 4, from: 2, to: 5 },
         { id: 5, from: 3, to: 3 }
-      ],
+      ]
+
+export default {
+  data: () => ({
+    networkEvents: "",
+    network: {
+      nodes: defNodes.slice(0),
+      edges: defEdges.slice(0),
       options: {
         nodes: {
           shape: "circle",
@@ -146,20 +150,8 @@ export default {
     },
     resetNetwork() {
       this.network = {
-        nodes: [
-          { id: 1, label: "Node 1" },
-          { id: 2, label: "Node 2" },
-          { id: 3, label: "Node 3" },
-          { id: 4, label: "Node 4" },
-          { id: 5, label: "Node 5" }
-        ],
-        edges: [
-          { id: 1, from: 1, to: 3 },
-          { id: 2, from: 1, to: 2 },
-          { id: 3, from: 2, to: 4 },
-          { id: 4, from: 2, to: 5 },
-          { id: 5, from: 3, to: 3 }
-        ],
+        nodes: defNodes.slice(0),
+        edges: defEdges.slice(0),
         options: {}
       };
     },
