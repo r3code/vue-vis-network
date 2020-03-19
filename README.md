@@ -41,7 +41,8 @@ yarn add vue-vis-network
 
 Declare the component
 ``` javascript
-Vue.component('network', vueVisNetwork.Network);
+import { Network } from "vue-vis-network";
+Vue.component('network', Network);
 ```
 
 Add the component in the template.
