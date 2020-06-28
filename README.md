@@ -1,5 +1,7 @@
 # vue-vis-network
 
+***!!! NOTE !!! Hi developer. Please contribute to the project if you find a bug or suggest an improvement / feature. Because I’m very, very busy these days, and it won’t end in the next 2-4 months. Hope you can do it faster than me )***
+
 > Vue2 component to integrate with <a href="Vue2 component to integrate with vis-network">Vis-Network</a> views
 
 <p align="center">
