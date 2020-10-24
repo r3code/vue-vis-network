@@ -101,7 +101,7 @@ new Vue({
 
 Add Visjs CSS
 ``` css
-@import "vue-vis-network/dist/vueVisNetwork.css";
+import "vue-vis-network/node_modules/vis-network/dist/vis-network.css";
 ```
 
 Here is a [basic working demo](https://codepen.io/r3code/pen/abOjJbQ)
