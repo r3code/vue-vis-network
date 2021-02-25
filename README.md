@@ -119,8 +119,8 @@ By default all Vis-network events are emitted by your component. You can subscri
     :edges="edges"
     :options="options"
     :events="['selectNode', 'hoverNode']"
-    @selectNode="onNodeSelected"
-    @hoverNode="onNodeHovered">
+    @select-node="onNodeSelected"
+    @hover-node="onNodeHovered">
     </network>
   </div>
 </body>
